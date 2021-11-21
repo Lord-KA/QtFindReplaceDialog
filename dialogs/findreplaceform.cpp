@@ -4,7 +4,7 @@
  */
 
 #include <QtGui>
-#include <QTextEdit>
+#include <QPlainTextEdit>
 #include <QRegExp>
 #include <QSettings>
 #include <QShowEvent>
@@ -54,7 +54,7 @@ void FindReplaceForm::hideReplaceWidgets() {
     ui->replaceAllButton->setVisible(false);
 }
 
-void FindReplaceForm::setTextEdit(QTextEdit *textEdit_) {
+void FindReplaceForm::setPlainTextEdit(QPlainTextEdit *textEdit_) {
     if (textEdit) {
         // Disconnect old control:
         disconnect(textEdit, 0, ui->replaceButton, 0);

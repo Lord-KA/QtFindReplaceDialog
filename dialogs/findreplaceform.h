@@ -15,24 +15,24 @@ namespace Ui {
     class FindReplaceForm;
 }
 
-class QTextEdit;
+class QPlainTextEdit;
 class QSettings;
 class QEvent;
 class QShowEvent;
 
 /**
   * The form for the find/replace dialog.  The form presents the typical
-  * widgets you find in standard find/replace dialogs, and it acts on a QTextEdit.
+  * widgets you find in standard find/replace dialogs, and it acts on a QPlainTextEdit.
   *
   * \image html Screenshot-FindReplace.png
   *
-  * You need to set the QTextEdit explicitly, using the method setTextEdit(QTextEdit *textEdit).
+  * You need to set the QPlainTextEdit explicitly, using the method setPlainTextEdit(QPlainTextEdit *textEdit).
   *
   * For instance
   * \code
   * m_findReplaceDialog = new FindReplaceDialog(this);
   * m_findReplaceDialog->setModal(false);
-  * m_findReplaceDialog->setTextEdit(ui->textEdit);
+  * m_findReplaceDialog->setPlainTextEdit(ui->textEdit);
   * \endcode
   *
   * The find functionalities is available even if the find dialog is not shown: if something
@@ -59,7 +59,7 @@ public:
       * Associates the text editor where to perform the search
       * @param textEdit_
       */
-    void setTextEdit(QTextEdit *textEdit_);
+    void setPlainTextEdit(QPlainTextEdit *textEdit_);
 
     /// hides replace widgets from the form
     void hideReplaceWidgets();
@@ -143,7 +143,7 @@ protected:
     QTextCursor textCursor;
 
     /// the text editor (possibly) associated with this form
-    QTextEdit *textEdit;
+    QPlainTextEdit *textEdit;
 };
 
 #endif // FINDREPLACEFORM_H

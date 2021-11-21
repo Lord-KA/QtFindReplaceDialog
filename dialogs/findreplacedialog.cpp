@@ -30,8 +30,8 @@ void FindReplaceDialog::changeEvent(QEvent *e)
     }
 }
 
-void FindReplaceDialog::setTextEdit(QTextEdit *textEdit) {
-    ui->findReplaceForm->setTextEdit(textEdit);
+void FindReplaceDialog::setPlainTextEdit(QPlainTextEdit *textEdit) {
+    ui->findReplaceForm->setPlainTextEdit(textEdit);
 }
 
 void FindReplaceDialog::writeSettings(QSettings &settings, const QString &prefix) {
